@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vakku_mini_project/profile.dart';
-import 'package:vakku_mini_project/record_screen.dart';
+
 // import 'package:vakku_mini_project/record_screen.dart';
-// import 'package:vakku_mini_project/sample.dart';
+import 'package:vakku_mini_project/sample.dart';
 
 class HomeScreen1 extends StatelessWidget {
   const HomeScreen1({super.key});
