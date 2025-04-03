@@ -11,7 +11,6 @@ import 'dart:html' as html; // For web
 void showAudioRecorderDialog(BuildContext context) {
   final FlutterSoundRecord recorder = FlutterSoundRecord();
   String? recordedFilePath;
-  Uint8List? webRecordedBytes;
   bool isRecording = false;
 
   showDialog(
@@ -61,7 +60,9 @@ void showAudioRecorderDialog(BuildContext context) {
                   ElevatedButton(
                     onPressed: () {
                       // Play recording on mobile
-                      recorder.start(path: recordedFilePath!);
+                      final AudioPlayer _audioPlayer = AudioPlayer();
+
+                      _audioPlayer.play(recordedFilePath!, isLocal: true);
                     },
                     child: const Text("Play Recording"),
                   ),
@@ -71,13 +72,6 @@ void showAudioRecorderDialog(BuildContext context) {
                       final AudioPlayer _audioPlayer = AudioPlayer();
 
                       _audioPlayer.play(recordedFilePath!, isLocal: true);
-
-                      // final blob = html.Blob([webRecordedBytes!], 'audio/webm');
-                      // final url = html.Url.createObjectUrlFromBlob(blob);
-                      // html.AnchorElement(href: url)
-                      //   ..setAttribute("download", "recording.webm")
-                      //   ..click();
-                      // html.Url.revokeObjectUrl(url);
                     },
                     child: const Text("Download Recording"),
                   ),
