@@ -33,37 +33,39 @@ class HomeScreen1 extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const SizedBox(height: 20),
-          GridView.count(
-            shrinkWrap: true,
-            crossAxisCount: 5,
-            crossAxisSpacing: 30,
-            mainAxisSpacing: 30,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            children: [
-              'അ',
-              'ആ',
-              'ഇ',
-              'ഈ',
-              'ഉ',
-              'ഊ',
-              'ജ',
-              'എ',
-              'ഏ',
-              'ഐ',
-              'ഒ',
-              'ഓ',
-              'ഔ',
-              'അം',
-              'അഃ'
-            ].map((text) => _buildButton(context, text)).toList(),
-          ),
-          const SizedBox(height: 40),
-          Image.asset('assets/images/character.png', height: 200),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(height: 20),
+            GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 5,
+              crossAxisSpacing: 30,
+              mainAxisSpacing: 30,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              children: [
+                'അ',
+                'ആ',
+                'ഇ',
+                'ഈ',
+                'ഉ',
+                'ഊ',
+                'ജ',
+                'എ',
+                'ഏ',
+                'ഐ',
+                'ഒ',
+                'ഓ',
+                'ഔ',
+                'അം',
+                'അഃ'
+              ].map((text) => _buildButton(context, text)).toList(),
+            ),
+            const SizedBox(height: 40),
+            Image.asset('assets/images/character.png', height: 200),
+          ],
+        ),
       ),
     );
   }
@@ -76,8 +78,10 @@ class HomeScreen1 extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       ),
       onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => CharacterScreen()));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => CharacterScreen(
+                  letter: text,
+                )));
       },
       child: Text(
         text,

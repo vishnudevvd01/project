@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"vaaku-audio","appId":"1:815136769363:android:a4930e3e43103f77c10da6","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"vaaku-audio","configurations":{"android":"1:815136769363:android:a4930e3e43103f77c10da6","web":"1:815136769363:web:362708f7d9ac96a1c10da6"}}}}}}

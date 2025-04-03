@@ -5,6 +5,8 @@ import 'package:vakku_mini_project/services/firebase_services.dart';
 import 'profile.dart';
 
 class CharacterScreen extends StatefulWidget {
+  String letter;
+  CharacterScreen({required this.letter});
   @override
   _CharacterScreenState createState() => _CharacterScreenState();
 }
@@ -15,14 +17,20 @@ class _CharacterScreenState extends State<CharacterScreen> {
 
   // Function to play audio for the character
   void playCharacterAudio() async {
-    String audioUrl = await _firebaseService
-        .getAudioUrl('അ'); // Replace with your actual character/letter ID
+    String audioUrl = await _firebaseService.getAudioUrl(
+        widget.letter); // Replace with your actual character/letter ID
     if (audioUrl.isNotEmpty) {
       await _audioPlayer
           .play(UrlSource(audioUrl) as String); // Play audio from the URL
     } else {
       print("Audio not available for this character.");
     }
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
   }
 
   @override

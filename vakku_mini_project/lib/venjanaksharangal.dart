@@ -80,7 +80,10 @@ class MalayalamLettersScreen extends StatelessWidget {
               ),
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CharacterScreen()),
+                MaterialPageRoute(
+                    builder: (context) => CharacterScreen(
+                          letter: letters[index],
+                        )),
               ),
               child: Text(
                 letters[index],

@@ -6,9 +6,18 @@ class FirebaseService {
 
   Future<String> getAudioUrl(String letter) async {
     try {
-      DocumentSnapshot doc =
-          await _firestore.collection('Malayalam_alphabets').doc(letter).get();
-      return doc['gs://vaaku-audio.firebasestorage.app/malayalam_audios/അ.mp3'];
+      String url = "";
+      await _firestore
+          .collection('Malayalam_alphabets')
+          .doc(letter)
+          .get()
+          .then((value) {
+        if (value.exists) {
+          url = value.get("audio_url");
+          print(url);
+        }
+      });
+      return url;
     } catch (e) {
       if (kDebugMode) {
         print("Error fetching audio URL: $e");

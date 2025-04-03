@@ -35,6 +35,8 @@ dependencies:
   cloud_firestore: ^5.6.5
   cupertino_icons: ^1.0.8
   audioplayers: ^0.20.1
+  record: ^6.0.0
+  path_provider: ^2.1.5
 
 
 
@@ -66,17 +68,18 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets\images\logo.png
-    - assets\images\Component 1.png
-    - assets\images\Component 2.png
-    - assets\images\aa.png
-    - assets\images\kaa.png
-    - assets\images\va.png
-    - assets\images\soon.png
-    - assets\images\character.png
-    - assets\images\speaker.png
-    - assets\images\mic.png
-    - assets\images\profile.png
+      - assets/images/
+    # - assets\images\logo.png
+    # - assets\images\Component 1.png
+    # - assets\images\Component 2.png
+    # - assets\images\aa.png
+    # - assets\images\kaa.png
+    # - assets\images\va.png
+    # - assets\images\soon.png
+    # - assets\images\character.png
+    # - assets\images\speaker.png
+    # - assets\images\mic.png
+    # - assets\images\profile.png
 
 
 
