@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "815136769363",
+    "project_id": "vaaku-audio",
+    "storage_bucket": "vaaku-audio.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815136769363:android:a4930e3e43103f77c10da6",
+        "android_client_info": {
+          "package_name": "com.example.vakku_mini_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXpW8jn37pseRrW3xplf1CZMLFlO98efE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
