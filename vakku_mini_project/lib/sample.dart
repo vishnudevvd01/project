@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 // Import your Firebase service
 import 'package:vakku_mini_project/services/firebase_services.dart';
+import 'package:vakku_mini_project/services/recordAudio.dart';
 import 'profile.dart';
 
 class CharacterScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
         widget.letter); // Replace with your actual character/letter ID
     if (audioUrl.isNotEmpty) {
       await _audioPlayer
-          .play(UrlSource(audioUrl) as String); // Play audio from the URL
+          .play(audioUrl); // Play audio from the URL
     } else {
       print("Audio not available for this character.");
     }
@@ -82,6 +83,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                 CircleButton(
                     imagePath: 'assets/images/mic.png',
                     onTap: () {
+                      showAudioRecorderDialog(context);
                       // You can add recording functionality here later
                     }),
                 CircleButton(
