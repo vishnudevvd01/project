@@ -51,7 +51,7 @@ class HomeScreen1 extends StatelessWidget {
                 'ഈ',
                 'ഉ',
                 'ഊ',
-                'ജ',
+                'ഋ',
                 'എ',
                 'ഏ',
                 'ഐ',

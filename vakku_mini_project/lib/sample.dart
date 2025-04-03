@@ -21,8 +21,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
     String audioUrl = await _firebaseService.getAudioUrl(
         widget.letter); // Replace with your actual character/letter ID
     if (audioUrl.isNotEmpty) {
-      await _audioPlayer
-          .play(audioUrl); // Play audio from the URL
+      await _audioPlayer.play(audioUrl as Source); // Play audio from the URL
     } else {
       print("Audio not available for this character.");
     }
